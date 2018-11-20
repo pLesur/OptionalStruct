@@ -108,7 +108,7 @@ fn handle_list(
                 nested_original.push(original_nested_name.clone());
             }
         }
-        _ => panic!("Only optional_derive are supported"),
+        _ => {},
     };
 }
 
