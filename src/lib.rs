@@ -181,6 +181,12 @@ fn create_struct(fields: &Vec<Field>, data: Data, generics: &Generics) -> Tokens
             pub fn apply_options(&mut self, optional_struct: #optional_struct_name #generics_no_where) {
                 #assigners
             }
+
+            pub fn with_options(self, optional_struct: #optional_struct_name #generics_no_where) -> Self {
+                #assigners
+
+                Self
+            }
         }
 
         impl #generics #optional_struct_name #generics_no_where {
